@@ -49,26 +49,85 @@
       <span class="small">by <a href="http://github.com/s7ephen">s7ephen</a></span></h1>
 
     <div class="description">
-      Like "OTR" for your phone. Send/Receive blowfish encrypted SMS messages.
+      Like <a href="http://www.cypherpunks.ca/otr/">"OTR"</a> but for SMS. Send/Receive blowfish encrypted SMS messages on your Android phone.
     </div>
 
-    <p>Blowfish_sms is a script that runs on Android's SL4A (Scripting Layer For Android). It uses native API's to perform GUI and other "phoneish" things. It is intended to demonstrate the ease and power of having scripting languages available on your phone.</p><h2>Dependencies</h2>
-<p>SL4A (Scripting Layer For Android) download it on your computer here, or use the phone on your camera to auto-download it here.
-Python For Android download it on your computer here, or use the phone on your camera to auto-download it here.
-Thats it!
-When I get the time to implement Blowfish in pure Java I may port this over a native Dalvik runtime (.apk). But for now I think the "openness" and readability of scripts makes it easier to "trust" an application of this kind, which is why this is a perfect Proof-of-Concept for SL4A.</p>
+    <p>Blowfish_sms is a script that runs on Android's <a href="http://code.google.com/p/android-scripting/">SL4A (Scripting Layer For Android)</a>. It uses <a href="http://code.google.com/p/android-scripting/wiki/ApiReference">native API's</a> to perform GUI and other "phoneish" things. It is intended to demonstrate the ease and power of having scripting languages available on your phone.</p>
+<h2>Dependencies</h2>
+  <ul>
+    <li>SL4A (Scripting Layer For Android). Download it on your computer <a href="http://code.google.com/p/android-scripting/downloads/detail?name=sl4a_r2.apk&can=2&q=">here</a>, or
+use the barcode scanner on your phone to auto-download it:</li> 
+    <li>Python For Android. Download it on your computer <a href="http://code.google.com/p/android-scripting/downloads/detail?name=python_for_android_r1.apk&can=2&q=">here</a>, or use the camera on your camera to auto-download it:</li> 
+    <li>Thats it!</li> 
+  </ul>
+<p>
+Note:<br>
+SL4A will allow you to use QR-Codes (the barcode thingies above) to distribute your scripts also if they are below 4096 bytes in size!
+<br><br>
+If I get the time to implement Blowfish in pure Java I may port this over a native Dalvik runtime (.apk). But for now I think the "openness" and readability of scripts makes it easier to "trust" an application of this kind, which is why I thought this was a perfect app to write using SL4A.</p>
 <h2>Install</h2>
-<p>Install Scripting Layer For Android
-Install Python for Android
-Mount your phone as a USB Drive
-Download blowfish_sms.py and copy it to : sl4a/scripts on your phone.</p>
+  <ul>
+    <li>Install <a href="http://code.google.com/p/android-scripting/downloads/detail?name=sl4a_r2.apk&can=2&q=">Scripting Layer For Android</a></li>
+    <li>Install <a href="http://code.google.com/p/android-scripting/downloads/detail?name=python_for_android_r1.apk&can=2&q=">Python for Android</a></li>
+    <li>Mount your phone as a USB Drive (standard feature on Android phones ;-)</li>
+    <li>Download <a href="http://github.com/s7ephen/Blowfish-SMS/blob/master/blowfish_sms.py">blowfish_sms.py</a> (or copy it out of the downloaded repository bundle) and copy it to : sl4a/scripts/ on your phone.<li>
+    <li>Thats it!</li> 
+  </ul>
 <h2>License</h2>
 <p>GPL</p>
 <h2>Authors</h2>
 <p>Stephen A. Ridley (stephen@sa7ori.org)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Stephen A. Ridley (stephen@sa7ori.org)<br/>      </p>
 
+  <h2>Screenshots:</h2> 
+  <p>Here are some screenshots of Blowfish_SMS running:<br/> 
+    <div align="center"> 
+    <table border=0> 
+      <tr> 
+        <td align="center">1. Launching SL4A</td> 
+        <td align="center">2. Select Blowfish_SMS script.</td> 
+      </tr> 
+      <tr> 
+        <td valign="top"> 
+          <a href="images/screenshots/launch_SL4A.png"><img src="images/screenshots/launch_SL4A.png" alt=""/></a></td> 
+          <a href="images/screenshots/select_script.png"><img src="images/screenshots/select_script.png" alt=""/></a></td> 
+      <tr> 
+        <td align="center">3. When launched, you see this warning.</td> 
+        <td align="center">4. Then you select the person you wanna chat with.</td> 
+      </tr> 
+      <tr> 
+        <td valign="top"> 
+          <a href="images/screenshots/starting_conversation.png"><img src="images/screenshots/starting_conversation.png" alt=""/></a></td> 
+          <a href="images/screenshots/select_contact_to_converse_with.png"><img src="images/screenshots/select_contact_to_converse_with.png" alt=""/></a></td> 
+      </tr> 
+      <tr> 
+        <td align="center">5. Messages limited to 90 chars.</td> 
+        <td align="center">6. Enter the Blowfish passphrase.</td> 
+      </tr> 
+      <tr> 
+        <td valign="top"> 
+          <a href="images/screenshots/warning_about_message_size.png"><img src="images/screenshots/warning_about_message_size.png" alt=""/></a></td> 
+          <a href="images/screenshots/enter_blowfish_password.png"><img src="images/screenshots/enter_blowfish_password.png" alt=""/></a></td> 
+      </tr> 
+      <tr> 
+        <td align="center">7. The SMS CLI Interface.</td> 
+        <td align="center">8. Sending Messages from the SMS CLI interface</td> 
+      </tr> 
+      <tr> 
+        <td valign="top"> 
+          <a href="images/screenshots/the_cli_sms_chat_window.png"><img src="images/screenshots/the_cli_sms_chat_window.png" alt=""/></a></td> 
+          <a href="images/screenshots/sending_encrypted_sms_messages.png"><img src="images/screenshots/sending_encrypted_sms_messages.png" alt=""/></a></td> 
+      </tr> 
+      <tr> 
+        <td align="center">9. Receiving encrypted SMS messages (auto-decrypted).</td> 
+        <td align="center">10. Messages are marked read but remain as cyphertext.</td> 
+      </tr> 
+      <tr> 
+        <td valign="top"> 
+          <a href="images/screenshots/receiving_encrypted_sms_phone_only.png"><img src="images/screenshots/receiving_encrypted_sms_phone_only.png" alt=""/></a></td> 
+          <a href="images/screenshots/as_you_can_see_smses_are_encrypted_in_sms_viewer.png"><img src="images/screenshots/as_you_can_see_smses_are_encrypted_in_sms_viewer.png" alt=""/></a></td> 
+      </tr> 
+    </table> 
+    </div> 
 
     <h2>Download</h2>
     <p>
