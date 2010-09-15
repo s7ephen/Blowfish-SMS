@@ -569,6 +569,10 @@ def send(plaintext_sms, contact, password, dr):
     """
     bf = Blowfish(password)
     bf.initCTR()
+    # before I get a shitton of emails, YES, I KNOW
+    # it is bad that the keystream does not advance because
+    # the counter never steps forward and the state machine never
+    # gets going. but cut me some slack, it is a PoC ;-)
     ct = bf.encryptCTR(plaintext_sms)
     sms = "sa7"+ct.encode('base64').strip().replace("==","")
     print "Ciphertext: %s" % repr(ct)
